@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOVE PROPOSAL</title>
+
+    <style>
+        body {
+            background-color: rgb(255, 124, 146);
+        }
+
+        .panel {
+            margin: 100px;
+            margin-left: 500px;
+            background-color: white;
+            width: 500px;
+            height: 500px;
+            border-radius: 20px;
+            text-align: center;
+            padding-top: 50px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .panel h1 {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size:2.4rem;
+        }
+        /* .panel h2 {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size:2.6rem;
+        } */
+      
+
+        #yes {
+            height: 40px;
+            width: 60px;
+            background-color: red;
+            border: 2px solid white;
+            border-radius: 10px;
+            color: white;
+            margin-left: -50px;
+        }
+
+        #no {
+            position: absolute;
+            height: 40px;
+            width: 60px;
+            background-color: red;
+            border: 2px solid white;
+            border-radius: 10px;
+            color: white;
+            margin-left: 10px;
+        }
+
+        #yes:hover {
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="panel">
+        <h1 id="name1"></h1>
+        <img src="https://gifman.net/wp-content/uploads/2019/06/ursinho-fofo-apaixonado.gif" alt="">
+        <h2>Will you date me? </h2>
+        <a href="index4.html"><button
+                id="yes" onclick="song()"> Yes </button></a>
+        
+        <button onmouseover="touch()" id="no"> NO</button>
+    </div>
+
+    <script>
+        function touch() {
+            var btn = document.getElementById("no")
+
+            var x = window.innerWidth;
+            var y = window.innerHeight;
+
+            var maxX = x - btn.offsetWidth;
+            var maxY = y - btn.offsetHeight;
+
+            var posX = Math.floor(Math.random() * maxX);
+            var posY = Math.floor(Math.random() * maxY);
+
+            btn.style.left = posX + "px";
+            btn.style.top = posY + "px";
+        }
+        let name_data = localStorage.getItem("name");
+        let n = document.getElementById("name1");
+        n.innerHTML = `I LOVE YOU  ${name_data}`;
+        let audio=document.getElementById("yes")
+        function song()
+        {
+            audio.play();
+        }
+    </script>
+</body>
+
+</html>

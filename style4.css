@@ -1,0 +1,39 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Satisfy&display=swap');
+*
+{
+    background-color: black;
+    /* background: url("WhatsApp Audio 2024-03-24 at 21.01.21_48adfbb6.mp3"); */
+}
+#image
+{
+    height: 400px;
+    width: 400px;
+    position: absolute;
+    left: 36%;
+    /* top: 4%; */
+}
+.heading h1
+{
+    color:white;
+    font-family:  "Allura", cursive;
+    font-size: 2.2rem;
+    position: absolute;
+    left: 43%;
+    bottom:38%;
+}
+.text
+{
+    height: 270px;
+    width: 700px;
+    /* border: 2px solid white; */
+    position: absolute;
+    left:28%;
+    bottom:2%;
+}
+.text p
+{
+    color:white;
+    font-family:  "Allura", cursive;
+    font-size: 2rem;
+}
